@@ -28,6 +28,22 @@ app.get('/home', (req, res)=>{
     })
 })
 
+// router for article Page
+app.get('/article', (req, res)=>{
+    res.render('article', {
+        title: 'ARTICLE PAGE',
+        style: 'article.css'
+    })
+})
+
+// create article page
+app.get('/create', (req, res)=>{
+    res.render('create', {
+        title: 'CREATE ARTICLE PAGE',
+        style: 'create.css'
+    })
+})
+
 
 // host running on
 app.listen(PORT, ()=>{

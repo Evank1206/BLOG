@@ -1,0 +1,133 @@
+
+<header>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    {{!-- fontaeSome --}}
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</header>
+
+{{!-- body starts here --}}
+<body id="body">
+{{!-- main container --}}
+  <div class="container border border-primary ">
+{{!-- header --}}
+  
+      <div class="navbar navbar-expand-lg " id="header" style="height: 10rem; background-color:cornflowerblue">
+        <h1 class="text-center mx-auto">ARTICLE PAGE</h1> 
+
+      </div>
+
+{{!-- articles starts here --}}
+
+{{!-- 2 --}}
+  <div class="mt-4">
+    <a href="#"><h3>HEADLINE CARS:</h3></a>
+    <hr>
+    <h5 class="">THIS IS SUB-HEADLINE: "this article about you will know how to make cars"</h5>
+  </div>
+
+    {{!-- A1 --}}
+          {{!-- <div class="row">
+            <div class="col-sm-8 mt-4">
+              <div class="card mb-4" style="height: 30rem;">
+                <div class="card-body">
+            
+            <img class="card-img" style="height: 27.5rem;" src="https://searchengineland.com/figz/wp-content/seloads/2016/02/uber-logo-1920.jpg" alt="Card image">
+                
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4 mt-4">
+              <div class="card" style="height: 30rem;">
+                <div class="card-body">
+                   <a href="#"><h3>Title: shdjkvn ndjsnj  jdsnfjnsn</h3></a>
+                   <hr>
+                    <h5 class="">Short discription: "this article about you will know how to make cars"</h5>
+                    <h5>Posted date:</h5>
+                 
+                </div>
+              </div>
+            </div>
+          </div> --}}
+
+{{!-- 2 --}}
+  <div class="card mb-4">
+    <img class="card-img" src="https://searchengineland.com/figz/wp-content/seloads/2016/02/uber-logo-1920.jpg" alt="Card image">
+    <p class="mt-4 p-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quas. In molestiae, sapiente quae vero nemo eligendi quis, itaque accusamus sed ratione inventore perferendis nulla vel unde, temporibus possimus quidem! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non alias, dolorum, voluptatum temporibus eaque ipsum similique earum quam perspiciatis illo pariatur ratione at quia vero dolor incidunt numquam facilis. Nam.</p>
+  </div>
+
+  {{!-- 2art --}}
+    <div class="mt-4">
+        <a href="#"><h3>HEADLINE CARS:</h3></a>
+        <hr>
+        <h5 class="">THIS IS SUB-HEADLINE: "this article about you will know how to make cars"</h5>
+  </div>
+
+  <div class="card mb-4 p-4">
+    <img class="card-img" src="https://searchengineland.com/figz/wp-content/seloads/2016/02/uber-logo-1920.jpg" alt="Card image">
+    <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laboriosam repellat dolore voluptatum enim officia ipsa, dicta eaque ratione magni pariatur cum dignissimos unde in possimus velit. Libero, sed consequatur. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non alias, dolorum, voluptatum temporibus eaque ipsum similique earum quam perspiciatis illo pariatur ratione at quia vero dolor incidunt numquam facilis. Nam.</p>
+
+  </div> 
+
+    {{!-- 3art --}}
+    <div class="mt-4">
+        <a href="#"><h3>HEADLINE CARS:</h3></a>
+        <hr>
+        <h5 class="">THIS IS SUB-HEADLINE: "this article about you will know how to make cars"</h5>
+  </div>
+
+  <div class="card mb-4 p-4">
+    <img class="card-img" src="https://searchengineland.com/figz/wp-content/seloads/2016/02/uber-logo-1920.jpg" alt="Card image">
+    <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia vitae consectetur tempore commodi doloremque voluptatibus velit atque maiores, eveniet dolore quo. Veniam rem minima porro corporis. Possimus error veniam dolor? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non alias, dolorum, voluptatum temporibus eaque ipsum similique earum quam perspiciatis illo pariatur ratione at quia vero dolor incidunt numquam facilis. Nam.</p>
+
+  </div> 
+
+  {{!-- main container ends here --}}  
+ </div>
+
+{{!-- comment section --}}
+ <div class="container mt-4">
+
+            <div class="row">
+        <div class="col-sm-1">
+            <div class="card rounded-circle" id="userPhoto">
+                <div class="card-body">
+        
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-11">
+            <div class="card" id="userCommentHolder">
+                <div class="card-body">
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <div class="input-group mt-4">
+        <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fa fa-commenting"></i></span>
+        </div>
+        <textarea class="form-control" id="userCommentInput" aria-label="With textarea"></textarea>
+    </div>
+    <input class="btn btn-primary mt-4 float-right" id="submitBtn" type="submit" value="Submit">
+
+ </div>
+
+{{!-- pagination here --}}
+<div class="container mt-4">
+    <nav aria-label="Page navigation">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
+</div>
+
+
+{{!-- body ends here --}}
+</body>

@@ -1,7 +1,17 @@
-#body{
+/* #body{
     height: 100vh;
 }
 #mainContainer{
     margin-top: 5%;
     border: solid, blue;
+} */
+
+#header{
+    /* background-image: url(http://s3.amazonaws.com/images.seroundtable.com/google-css-images-1515761601.jpg);
+    background-position: center;
+    background-size: cover; */
+    /* background-repeat: no-repeat; */
+    background-image: url(../img/mp3.jpg);
+    background-position: center;
+    /* background-size: cover; */
 }
