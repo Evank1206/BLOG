@@ -1,0 +1,7 @@
+#body{
+    height: 100vh;
+}
+#mainContainer{
+    margin-top: 5%;
+    border: solid, blue;
+}

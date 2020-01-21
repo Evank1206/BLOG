@@ -1,0 +1,8 @@
+body{
+    background-image: url(../img/planet-earth-in-space.jpg);
+    background-position: center;
+}
+#login{
+    background-color:#E9F5FA;
+    margin-top: 9%;
+};
