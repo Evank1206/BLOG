@@ -1,0 +1,12 @@
+#body{
+    /* margin: 3% auto; */
+    background-image: url(..//img/draftcontent.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#mainContainer{
+
+    margin:13% auto ;
+    background-color: lightgrey;
+    border-radius: 3%;
+}

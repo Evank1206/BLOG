@@ -20,6 +20,14 @@ app.get('/login', (req, res)=>{
     })
 })
 
+// router for REGINSTERATION Page
+app.get('/register', (req, res)=>{
+    res.render('register', {
+        title: 'REGISTERATION PAGE',
+        style: 'register.css'     
+    })
+})
+
 // router for Home Page
 app.get('/home', (req, res)=>{
     res.render('home', {
