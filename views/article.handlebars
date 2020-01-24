@@ -12,90 +12,26 @@
 {{!-- header --}}
   
       <div class="navbar navbar-expand-lg " id="header" style="height: 10rem; background-color:cornflowerblue">
-        <h1 class="text-center mx-auto">ARTICLE PAGE</h1> 
+        {{!-- <h1 class="text-center mx-auto">{{headline}}</h1>  --}}
+        <h1 class="text-center">ARTICLE PAGE</h1>
 
       </div>
 
 {{!-- articles starts here --}}
 
 {{!-- 2 --}}
-  <div class="mt-4">
-    <a href="#"><h3>HEADLINE IT:</h3></a>
+  <div class="mt-4" id="head">
+    <a href="#"><h3>{{headline2}}</h3></a>
     <hr>
-    <h5 class="">THIS IS SUB-HEADLINE: "This Article about you will know how to use express middleware in platForm like node.js"</h5>
+    <h5 class="">{{subheadline2}}</h5>
   </div>
 
-    {{!-- A1 --}}
-          {{!-- <div class="row">
-            <div class="col-sm-8 mt-4">
-              <div class="card mb-4" style="height: 30rem;">
-                <div class="card-body">
-            
-            <img class="card-img" style="height: 27.5rem;" src="https://searchengineland.com/figz/wp-content/seloads/2016/02/uber-logo-1920.jpg" alt="Card image">
-                
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-4 mt-4">
-              <div class="card" style="height: 30rem;">
-                <div class="card-body">
-                   <a href="#"><h3>Title: shdjkvn ndjsnj  jdsnfjnsn</h3></a>
-                   <hr>
-                    <h5 class="">Short discription: "this article about you will know how to make cars"</h5>
-                    <h5>Posted date:</h5>
-                 
-                </div>
-              </div>
-            </div>
-          </div> --}}
-
-{{!-- 2 --}}
   <div class="card mb-4">
-    <img class="card-img" src="https://searchengineland.com/figz/wp-content/seloads/2016/02/uber-logo-1920.jpg" alt="Card image">
-    <p class="mt-4 p-4"><b>Middleware</b> literally means anything you put in the middle of one layer of the software and another. Express middleware are functions that execute during the lifecycle of a request to the Express server. Each middleware has access to the HTTP request and response for each route (or path) it’s attached to. In fact, Express itself is compromised wholly of middleware functions. Additionally, middleware can either terminate the HTTP request or pass it on to another middleware function using next (more on that soon). This “chaining” of middleware allows you to compartmentalize your code and create reusable middleware.</p>
-    <b class="pl-4">Express-MiddleWare Basics:</b>
-    <p class="p-4"> To get started, you’ll use the most basic of Express’ built-in middleware. This will give you the chance to see how middleware is used, and how Express middleware is structured.
-          Create a new project and npm init it…
-          npm init
-          npm install express --save
-          Create server.js and paste the following code:
-          const express = require('express');
-          const app = express();
-
-          app.get('/', (req, res, next) => {
-            res.send('Welcome Home');
-          });
-
-          app.listen(3000);
+    <img class="card-img" src={{image2}} alt="Card image">
+    <p class="mt-4 p-4">{{body2}}
     </p>
   </div>
 
-  {{!-- 2art --}}
-    <div class="mt-4">
-        <a href="#"><h3>HEADLINE CARS:</h3></a>
-        <hr>
-        <h5 class="">THIS IS SUB-HEADLINE: "this article about you will know how to make cars"</h5>
-  </div>
-
-  <div class="card mb-4 p-4">
-    <img class="card-img" src="https://searchengineland.com/figz/wp-content/seloads/2016/02/uber-logo-1920.jpg" alt="Card image">
-    <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laboriosam repellat dolore voluptatum enim officia ipsa, dicta eaque ratione magni pariatur cum dignissimos unde in possimus velit. Libero, sed consequatur. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non alias, dolorum, voluptatum temporibus eaque ipsum similique earum quam perspiciatis illo pariatur ratione at quia vero dolor incidunt numquam facilis. Nam.</p>
-
-  </div> 
-
-    {{!-- 3art --}}
-    <div class="mt-4">
-        <a href="#"><h3>HEADLINE CARS:</h3></a>
-        <hr>
-        <h5 class="">THIS IS SUB-HEADLINE: "this article about you will know how to make cars"</h5>
-  </div>
-
-  <div class="card mb-4 p-4">
-    <img class="card-img" src="https://searchengineland.com/figz/wp-content/seloads/2016/02/uber-logo-1920.jpg" alt="Card image">
-    <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia vitae consectetur tempore commodi doloremque voluptatibus velit atque maiores, eveniet dolore quo. Veniam rem minima porro corporis. Possimus error veniam dolor? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non alias, dolorum, voluptatum temporibus eaque ipsum similique earum quam perspiciatis illo pariatur ratione at quia vero dolor incidunt numquam facilis. Nam.</p>
-
-  </div> 
 
   {{!-- main container ends here --}}  
  </div>

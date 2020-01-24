@@ -1,23 +1,23 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const multer = require('multer');
-const upload = multer({ dest: 'public/uploads' });
-const mysql = require('mysql')
 
+// MULTER BELLOW
+
+const multer = require('multer')
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/uploads')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname)
+  }
+})
+
+const upload = multer({storage: storage})
+// const mysql = require('mysql')
+const db = require('./config/connection')
 const PORT = 7000;
-
-const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "password",
-    database: "blog"
-});
-
-db.connect();
-
-
-
 
 
 // handlebars required 
@@ -27,7 +27,16 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 // connection to public folder
-app.use(express.static('public'));
+app.use( express.static('public'));
+app.use("/assets", express.static('./assets'));
+
+// router for guest
+// app.get('/guest', (req, res)=>{
+//     res.render('guest', {
+//         title: 'GUEST PAGE',
+//         style: 'guest.css'     
+//     })
+// })
 
 // router for loginPage
 app.get('/login', (req, res)=>{
@@ -55,10 +64,35 @@ app.get('/home', (req, res)=>{
 
 // router for article Page
 app.get('/article', (req, res)=>{
-    res.render('article', {
-        title: 'ARTICLE PAGE',
-        style: 'article.css'
-    })
+
+    // console.log(req.query)
+
+    db.query(`SELECT * from articles WHERE id=${req.query.id}`,
+        
+
+        function (error, results, fields) {
+
+
+            res.set('Content-Type', 'text/html');
+            res.render('article', {
+                title: results[0].headline,
+                style: 'create.css',
+                helpers: {
+                    headline2: function(){return results[0].headline},
+                    subheadline2: function(){return results[0].subheadline},
+                    body2: function(){return results[0].body},
+                    image2: function(){return 'http://localhost:7000/uploads/' + results[0].image_url}
+                }
+            })
+
+
+        if (error) throw error;
+      });
+
+    // res.render('article', {
+    //     title: 'ARTICLE PAGE',
+    //     style: 'article.css'
+    // })
 })
 
 // create article page
@@ -70,15 +104,18 @@ app.get('/create', (req, res)=>{
 });
 
 app.post('/article', upload.single('image'),  (req, res)=>{
-    res.send("hello");
-    console.log(req.body);
-    console.log(req.file);
 
-    db.query(
 
-        `INSERT INTO articles (headline, subheadline, body) VALUES ('${req.body.headline}', '${req.body.subheadline}', '${req.body.body}')`,
+    db.query(`INSERT INTO articles (headline, subheadline, body, image_url) VALUES ('${req.body.headline}', '${req.body.subheadline}', '${req.body.body}', '${req.file.originalname}')`,
         
+
         function (error, results, fields) {
+
+            // console.log(results.insertId)rs
+
+            // res.redirect('http://localhost:7000/article?id=' + results.insertId);
+            res.send('http://localhost:7000/article?id=' + results.insertId)
+
         if (error) throw error;
       });
 })
