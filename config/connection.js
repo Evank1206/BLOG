@@ -1,13 +1,13 @@
-// const express = require("express");
-const mysql = require ('mysql');
+// // const express = require("express");
+// const mysql = require ('mysql');
 
-const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: process.env.PASSWORD,
-    database: "blog"
-});
+// const db = mysql.createConnection({
+//     host: "localhost",
+//     user: "root",
+//     password: "password",
+//     database: "blog"
+// });
 
-db.connect();
+// // db.connect();
 
-module.exports = db;
+// module.exports = db;

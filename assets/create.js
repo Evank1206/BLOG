@@ -25,18 +25,13 @@ document.getElementById('btn').onclick = function (e){
 }
 
 // comment section
-// document.getElementById('submitBtn').onclick = function(e){
-//     e.preventDefault();
-//   const comment = document.getElementById('userCommentInput').value;
-
-//   alert(comment);
+window.onload = function(){ 
+  document.getElementById('submit Btn').onclick = function(e){
+    console.log('>>>ONCLICK');
+      e.preventDefault();
+    const comment = document.getElementById('userCommentInput').value;
   
-// }
-
-$('#submitBtn').on(click, (e)=>{
-  e.preventDefault()
-  const comment = $('#userCommentInput').val;
-  console.log(comment);
-  
-
-})
+    console.log(comment);
+    
+  }
+};

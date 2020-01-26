@@ -12,7 +12,7 @@
 {{!-- header --}}
   
       <div class="navbar navbar-expand-lg " id="header" style="height: 10rem; background-color:cornflowerblue">
-        <h1 class="text-center mx-auto">HOME PAGE</h1> 
+        <h1 class="text-center mx-auto">HOME PAGE</h1>
 
         {{!-- <audio controls>
             <source src="horse.ogg" type="audio/ogg">
@@ -31,12 +31,14 @@
   </div> --}}
 
     {{!-- A1 --}}
+
+    {{#each (articles)}}
           <div class="row">
             <div class="col-sm-8 mt-4">
               <div class="card mb-4" style="height: 30rem;">
                 <div class="card-body">
             
-            <img class="card-img" style="height: 27.5rem;" src="https://searchengineland.com/figz/wp-content/seloads/2016/02/uber-logo-1920.jpg" alt="Card image">
+            <img class="card-img" style="height: 27.5rem;" src="http://localhost:7000/uploads/{{this.image_url}}" alt="Card image">
                 
                 </div>
               </div>
@@ -45,15 +47,16 @@
             <div class="col-sm-4 mt-4">
               <div class="card" style="height: 30rem;">
                 <div class="card-body">
-                   <a href="#"><h3>Title: What Is Express MiddleWare</h3></a>
+                   <a href="http://localhost:7000/article?id={{this.id}}"><h3>{{this.headline}}</h3></a>
                    <hr>
-                    <h5 class=""><b>Express middleware:</b> are functions that execute during the lifecycle of a request to the Express server. Each middleware has access to the HTTP request and response for each route (or path) it's attached to"</h5>
-                    <h5>Posted date:</h5>
+                    <h5>{{this.body}}</h5>
                  
                 </div>
               </div>
             </div>
           </div>
+
+          {{/each}}
 
 {{!-- 2 --}}
   {{!-- <div class="card mb-4">
@@ -62,61 +65,12 @@
 
  {{!-- A2 --}}
 
-    <div class="row">
-    <div class="col-sm-8 mt-4">
-      <div class="card mb-4" style="height: 30rem;">
-        <div class="card-body">
-    
-    <img class="card-img" style="height: 27.5rem;" src="https://searchengineland.com/figz/wp-content/seloads/2016/02/uber-logo-1920.jpg" alt="Card image">
-        
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-4 mt-4">
-      <div class="card" style="height: 30rem;">
-        <div class="card-body">
-            <a href="#"><h3>Title: What Is Nodemon js</h3></a>
-            <hr>
-            <h5 class="">Short discription: "<b>Nodemon:</b> is a utility that will monitor for any changes in your source and automatically restart your server. Perfect for development. Install it using npm. Just use nodemon instead of node to run your code, and now your process will automatically restart when your code changes."</h5>
-            <h5>Posted date:</h5>
-          
-        </div>
-      </div>
-    </div>
-  </div>
-
-{{!-- A3 --}}
-
-  <div class="row">
-    <div class="col-sm-8 mt-4">
-      <div class="card mb-4" style="height: 30rem;">
-        <div class="card-body">
-    
-    <img class="card-img" style="height: 27.5rem;" src="https://searchengineland.com/figz/wp-content/seloads/2016/02/uber-logo-1920.jpg" alt="Card image">
-        
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-4 mt-4">
-      <div class="card" style="height: 30rem;">
-        <div class="card-body">
-            <a href="#"><h3>Title: What Is JavaScript</h3></a>
-            <hr>
-            <h5 class="">Short discription: "<b>JavaScript, often abbreviated as JS,</b> is a high-level, just-in-time compiled, multi-paradigm programming language that conforms to the ECMAScript specification. JavaScript has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions"</h5>
-            <h5>Posted date:</h5>
-          
-        </div>
-      </div>
-    </div>
-  </div>
 
   {{!-- main container ends here --}}  
  </div>
 
 {{!-- pagination here --}}
-<div class="container mt-4">
+{{!-- <div class="container mt-4">
     <nav aria-label="Page navigation">
       <ul class="pagination">
         <li class="page-item"><a class="page-link" href="#">Previous</a></li>
@@ -127,7 +81,7 @@
       </ul>
     </nav>
 </div>
-
+ --}}
 
 {{!-- body ends here --}}
 </body>
