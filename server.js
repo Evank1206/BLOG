@@ -5,6 +5,10 @@ const userDao = require("./domain/userDao");
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
+// dotenv file
+require('dotenv').config();
+// console.log(process.env);
+
 // MULTER BELLOW
 const multer = require('multer')
 const storage = multer.diskStorage({
@@ -14,7 +18,7 @@ const storage = multer.diskStorage({
   filename: function (req, file, cb) {
     cb(null, file.originalname)
   }
-})
+});
 
 const upload = multer({storage: storage});
 const PORT = 7000;
@@ -32,9 +36,9 @@ app.use("/assets", express.static('./assets'));
 // mysql database connection 
 const mysql = require ('mysql');
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "password",
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
     database: "blog"
 });
 db.connect();
@@ -85,9 +89,6 @@ app.post('/login', async (req, res)=>{
 })
 
 
-
-
-
 // router for Home Page
 app.get('/home', (req, res)=>{
     
@@ -102,7 +103,7 @@ app.get('/home', (req, res)=>{
         res.set('Content-Type', 'text/html');
         res.render('home', {
             title: 'Home',
-            style: 'create.css',
+            style: 'home.css',
             helpers: {
                 articles: function(){return documents.map(item => {
                     item.body = item.body.substr(0, 350) + '...';
@@ -131,7 +132,7 @@ app.get('/article', (req, res)=>{
                     res.set('Content-Type', 'text/html');
                     res.render('article', {
                         title: articles[0].headline,
-                        style: 'create.css',
+                        style: 'article.css',
                         helpers: {
                             headline2: function(){return articles[0].headline},
                             subheadline2: function(){return articles[0].subheadline},
@@ -152,7 +153,6 @@ app.get('/article', (req, res)=>{
     }else{
         res.redirect('/home')
     }
-
 
 })
 

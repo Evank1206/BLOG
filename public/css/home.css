@@ -1,19 +1,9 @@
-/* #body{
-    height: 100vh;
-}
-#mainContainer{
-    margin-top: 5%;
-    border: solid, blue;
-} */
-
 #header{
-    /* background-image: url(http://s3.amazonaws.com/images.seroundtable.com/google-css-images-1515761601.jpg);
+
+    background-image: url(../img/image1.jpg);
     background-position: center;
-    background-size: cover; */
+    background-size: cover;
     /* background-repeat: no-repeat; */
-    background-image: url(../img/header.jpg);
-    background-position: center;
-    /* background-size: cover; */
 }
 
 #body{
@@ -21,4 +11,11 @@
     background-size: cover;
     background-position: center;
 
+}
+#home{
+    font-weight: bold;
+    color: white;
+}
+#footer{
+    font-size: 3rem;
 }

@@ -11,10 +11,8 @@
   <div class="container border border-primary ">
 {{!-- header --}}
   
-      <div class="navbar navbar-expand-lg " id="header" style="height: 10rem; background-color:cornflowerblue">
-        {{!-- <h1 class="text-center mx-auto">{{headline}}</h1>  --}}
-        <h1 class="text-center">ARTICLE PAGE</h1>
-
+      <div class="navbar navbar-expand-lg text-center" id="header" style="height: 10rem; background-color:cornflowerblue">
+        <h1 class="mx-auto" id="article">ARTICLE PAGE</h1>
       </div>
 
 {{!-- articles starts here --}}
@@ -70,17 +68,28 @@
  </div>
 
 {{!-- pagination here --}}
-{{!-- <div class="container mt-4">
+<div class="container mt-4">
     <nav aria-label="Page navigation">
       <ul class="pagination">
         <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-        <li class="page-item"><a class="page-link" href="/home">1</a></li>
-        <li class="page-item"><a class="page-link" href="/article">2</a></li>
-        <li class="page-item"><a class="page-link" href="/create">3</a></li>
+        <li class="page-item"><a class="page-link" href="/home">HOME</a></li>
+        <li class="page-item"><a class="page-link" href="/article">ARTICLE</a></li>
+        <li class="page-item"><a class="page-link" href="/create">CREATE</a></li>
         <li class="page-item"><a class="page-link" href="#">Next</a></li>
       </ul>
     </nav>
-</div> --}}
+</div>
+
+{{!-- footer --}}
+<div class="card text-center">
+
+  <div class="card-body" id="footer">
+    <a href="https://www.facebook.com/" class=""><i class="fa fa-facebook-square"></i></a>
+    <a href="https://evank1206.github.io/myPortfolio/" class=""><i class="fa fa-github-square"></i></a>
+    <a href="https://www.instagram.com/" class=""><i class="fa fa-instagram"></i></i></a>
+  </div>
+
+</div>
 
 <script>
   var id={{id}};
