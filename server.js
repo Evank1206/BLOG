@@ -10,7 +10,7 @@ require('dotenv').config();
 // console.log(process.env);
 
 // MULTER BELLOW
-const multer = require('multer')
+const multer = require('multer');
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'public/uploads')
@@ -19,9 +19,10 @@ const storage = multer.diskStorage({
     cb(null, file.originalname)
   }
 });
-
 const upload = multer({storage: storage});
-const PORT = 7000;
+
+// PORT LISTENING
+const PORT = process.env.PORT || 7000;
 
 // handlebars required 
 const exphbs = require('express-handlebars');
@@ -38,6 +39,7 @@ const mysql = require ('mysql');
 const db = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
+    // port:process.env.DB_PORT,
     password: process.env.DB_PASS,
     database: "blog"
 });
@@ -87,7 +89,6 @@ app.post('/login', async (req, res)=>{
     const response = {"status":"OK", "description": "User successfully logged in", "payload": { "token": jwtToken}}
     res.send(response);
 })
-
 
 // router for Home Page
 app.get('/home', (req, res)=>{

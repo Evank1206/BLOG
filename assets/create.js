@@ -24,7 +24,7 @@ document.getElementById('btn').onclick = function (e){
 
 }
 
-// comment section
+// section
 window.onload = function(){ 
   document.getElementById('submit Btn').onclick = function(e){
     console.log('>>>ONCLICK');

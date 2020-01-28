@@ -1,6 +1,6 @@
 document.getElementById('submitBtn').onclick = async function (e){
-    console.log(">>>> IN CREATE USER JS FUNCTION")
-    e.preventDefault();
+    // console.log("log")
+    // e.preventDefault();
     let request = {
         "userName": document.getElementById("userName").value,
         "email": document.getElementById("email").value,
@@ -14,8 +14,7 @@ document.getElementById('submitBtn').onclick = async function (e){
             'Content-Type': 'application/json'
         }
       }
-    )
-    .catch(function(e){
+    ).catch(function(e){
       console.log('FAILURE!!', e);
     });
     console.log(response.data)
