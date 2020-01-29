@@ -1,5 +1,6 @@
 PROJECT 2:
-
+usage: layouts for bootstrap & templete engine for express-handlebars front-end: javascript, back-end: node.js express database: mysql 
+new package: multer
 BLOG APP: 
 
 app starts in login page which recommend for user register for app.
