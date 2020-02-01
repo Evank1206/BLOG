@@ -186,7 +186,8 @@ app.post('/comment', upload.none(),  (req, res)=>{
 })
 
 // host running on
-app.listen(PORT, ()=>{
-    console.log(`SERVER CONNECTED: 7000`);
-    
-});
+    app.listen(PORT, ()=>{
+        console.log(`SERVER CONNECTED: 7000`);
+        
+    });
+
